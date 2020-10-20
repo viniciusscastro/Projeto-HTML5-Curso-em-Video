@@ -1,0 +1,246 @@
+@charset "UTF-8" ;
+@font-face{/*configuração de fonte*/
+	font-family: 'FonteLogo';
+	src : url("../_fonts/bubblegum-sans-regular.otf");
+	@import url(https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap);
+}
+/*formatação texto*/
+body{
+	font-family: Arial, sans-serif;
+	background-color: #dddddd;
+	color:rgba(0,0,0,1);
+	}
+
+div#interface{
+	width: 1500px; /*demilitação de largura*/	
+	background-color: #ffffff;
+	margin: -20px auto 0px auto;/*margens do texto com a tela:cima direita baixo esquerda*/
+	box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+	padding: 10px 10px 10px 10px;/* colocou uma borda maior entre o conteudo e o ambiente*/
+}
+
+header#cabecalho  img#icone{
+	position:absolute;
+	left: 1700px;
+	top: 65px;
+
+}
+header#cabecalho {
+	border-bottom: 1px #606060 solid;
+	height: 150px;
+	background: url("../_imagens/glass-logo-peq.jpg")no-repeat 0px 100px;
+}
+
+header#cabecalho h1{
+	font-family: 'FonteLogo', sans-serif;
+	font-size: 35pt;
+	color: #606060;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+	padding: 0px;
+	margin-bottom: 0px;
+}
+header#cabecalho h2 {
+	font-family: 'Titillium Web', sans-serif;
+	color: #888888;
+	font-size: 15pt;
+	padding: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+p{
+	text-align: justify;
+	text-indent: 50px;
+	font-size: 15pt;
+}
+
+a {
+	color: #606060;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+/*Formatação de imagem */
+figure.foto-legenda{
+	position: relative;
+	border: 8px solid white; /* largura das bordas*/
+	box-shadow: 1px 1px 4px black; /*sombra horizontal,  vertical, espalhamento e cor*/
+
+
+}
+figure.foto-legenda img{ /*definição de largura e altura quando alterado o tamanho da tela*/
+	width: 100%;
+	height: 100%;
+}
+figure.foto-legenda figcaption {
+	opacity: 0;
+	position: absolute;
+	top:0px;
+	background-color: rgba(0,0,0,.4);
+	color:white;
+	width:100%;
+	height: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	transition: opacity 1s;
+}
+figure.foto-legenda:hover figcaption{
+	opacity: 1;
+}
+/*formatação menu*/
+nav#menu {
+	display:block;
+}
+nav#menu ul{ /*formatação da lista(representação da lista)*/
+	list-style: none;/*tira as bolinhas da lsita desordenada*/
+	text-transform: uppercase;/*todas as letras maiusculas*/
+	position: absolute;/* posiçaõ relativa= preso no container nav#menu por exemplo
+						  posição absoluta estravasa o container do nav#menu ou seja pode 
+						  cobrir outros documentos*/
+
+	top: -20px;			/*posicionamento  vertical ou seja alem do top da tela -20px*/
+	left: 1250px;		/*posicionamento horizontal a direita 300px*/
+}
+
+nav#menu li{/*formatação dos list itens*/
+	display: inline-block; /*ordena os itens de maneira horizontal*/
+	background-color: #dddddd; /* cria o fundo retangular nos itens*/
+	padding:10px; /*controla o tamanho do background dos itens*/
+	margin: 2px; /*controla o espaço em torno dos itens*/
+	transition: background-color 1s;/*cria um periodo de transição entre a cor anterior*/
+}
+nav#menu li:hover{/*o efeito hover aplica algo quando o mouse passa sobre o botão*/
+	background-color: #606060;
+}
+
+nav#menu h1{/*esconde o menu principal para estar visivel para mecanismos de busca*/
+	display: none;
+}
+nav#menu a{/*todos os nav#menu ancora(link) terão a seguinte formatação*/
+	color: #000000;/*cor preta*/
+	text-decoration: none;
+
+}
+
+nav#menu a:hover{/*todos os links passam a mudar de cor em interação com o mouse*/
+		color: #ffffff;
+		text-decoration: underline;
+}
+
+section#corpo{
+	display: block;
+	width: 820px;/*largura da esqueda para direita*/
+	float: left;/* faz o bloco flutuar na esquerda*/
+	border-right: 1px solid #606060;
+	padding-right: 30px;
+}
+
+article#noticia-principal h2 {
+	font-size: 20pt;
+	color: #606060;
+	background-color: #dddddd;
+	padding: 5px 0px 5px 10px;/*espaçamento entre eles (cima, direita, baixo, esquerda)*/
+	margin: 10px 10px 10px 10px;
+}
+
+header#cabecalho-artigo h1{
+	font-family: 'Fontelogo', sans-serif;
+	font-size:20pt;
+	color: #606060;
+}
+
+header#cabecalho-artigo h2{
+	font-size: 13pt;
+	color:#cecece;
+	background-color: #ffffff;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	
+}
+
+.direita{
+	text-align: right;
+}
+
+header#cabecalho-artigo h3{
+	font-size:  12pt;
+	color: #606060;
+
+	
+}
+
+table#tabelaspec {
+	border: 1px solid #606060;
+	border-spacing: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table#tabelaspec td{
+	border: 1px solid #606060;
+	padding: 10px;
+	text-align:center;
+	vertical-align: middle;
+} 
+
+table#tabelaspec td.ce{
+	color: #ffffff;
+	background-color: #606060;
+	vertical-align: top;
+	font-weight: bold;
+	text-align: right;
+}
+
+table#tabelaspec td.cd{
+	background-color: #cecece;
+	text-align: left;
+	font-size: 15pt;
+
+}
+table#tabelaspec caption {
+	color: #88888;
+	font-size: 10pt;
+	font-weight: bolder;
+	font-size: 15pt;
+}
+table#tabelaspec caption span{
+	display: block;
+	float:right;
+	color: #000000;
+	margin-top: 10px;
+}
+
+aside#lateral{
+	display: block;/**/
+	width: 600px;/**/
+	float: right;/*faz o bloco de texto flutuar pela direita*/
+	background-color: #dddddd;
+	padding: 10px;
+	margin-top: 10px;
+	box-shadow: 4px 4px 4px rgba(0,0,0,.5);
+}
+aside#lateral h1{
+	font-family: 'Fontelogo', sans-serif;
+	font-size: 20pt;
+	color: #606060;
+	margin-top: 0px;
+}
+
+aside#lateral h2{
+	background-color: #606060;
+ 	font-size: 15pt;
+ 	color:#ffffff; 
+ 	padding: 5px 5px 5px 10px;
+}
+
+footer#rodape{
+	border-top:  1px solid #606060;
+	clear: both;
+
+}
+footer#rodape p{
+	text-align: center;
+}
